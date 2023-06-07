@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Places</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar (ionInput)="filterPlaces($event)"></ion-searchbar>
+
+  <ion-list>
+    <ion-card *ngFor="let place of places" (click)="navigateToPlace(place.place_id)">
+      <ion-card-header>
+        <ion-card-title>{{ place.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Location: {{ place.location }}</p>
+        <p>Type: {{ place.type }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+</ion-content>
