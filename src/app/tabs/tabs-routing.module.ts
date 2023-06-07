@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 import { PlacesListComponent } from '../components/places/places-list/places-list.component';
+import { PlaceDetailsComponent } from '../components/places/place-details/place-details.component';
+import { HomeListComponent } from '../components/home/home-list/home-list.component';
 
 const routes: Routes = [
   {
@@ -14,7 +16,7 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        component: PlacesListComponent,
+        component: HomeListComponent,
       },
       {
         path: 'activities',

@@ -1,3 +1,23 @@
-<p>
-  home-list works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Activities</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let activity of activities">
+      <ion-card-header>
+        <ion-card-title>{{ activity.user.username }}</ion-card-title>
+        <ion-card-subtitle>{{ activity.date | date: 'dd/MM/yyyy' }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <h5><strong>{{ activity.name }}</strong></h5>
+        <p>{{ activity.description }}</p>
+        <p>{{ (activity.duration - activity.duration % 60) / 60 | number: '1.0-0' }}h{{ activity.duration % 60 | number: '2.0-0' }} min</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
+
+

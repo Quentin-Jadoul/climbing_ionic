@@ -38,7 +38,7 @@ export class PlacesListComponent implements OnInit {
   }
 
   navigateToPlace(place_id: number) {
-    window.location.href = '/place/' + place_id;
+    window.location.href = 'places/' + place_id;
   }
 
   filterPlaces(event: any) {
